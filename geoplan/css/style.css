@@ -1,0 +1,640 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;    
+}
+
+.header{
+    min-height: 100vh;
+     width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.372), rgba(0, 0, 0, 0.769)),url(file:///C:/Users/hp/Desktop/geoplan/images/naslovnica.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;   
+}
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 180px;   
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+    padding-top: 15px;   
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+.text-box{
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;   
+}
+.text-box h1{
+    font-size: 62px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;   
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 18px;
+    color: white;
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.hero-btn:hover{
+    color: #fff;
+    border: 1px solid #f44336;
+    background: #f44336;
+    transition: 1s;
+    text-decoration: none;
+}
+
+nav .icon{
+    display: none;
+}
+
+
+@media(max-width: 700px){
+    .text-box h1{
+        font-size: 20px;
+    }
+        .nav-links ul li{
+            display: block;
+        }
+        .nav-links{
+            position: absolute;
+            background: #f44336;
+            height: 100vh;
+            width: 200px;
+            top: 0;
+            right: -200px;
+            text-align: left;
+            z-index: 2;
+            transition: 1s;
+        }
+        nav .icon{
+            display: block;
+            color: #fff;
+            margin: 30px;
+            margin-top: 0;
+            font-size: 22px;
+            cursor: pointer;
+        }
+        .nav-links ul{
+            padding: 30px;
+
+        }
+    }
+    
+    
+
+ /*----- O NAMA -----*/
+
+ .o-nama{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+ }
+ h1{
+    font-size: 36px;
+    font-weight: 500;  
+    padding-top: 15px;
+    padding-bottom: 42px;
+ }
+
+ .row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between; 
+ }
+ .o-nama-col{
+    flex-basis: 31%;
+    background: transparent;
+    color: #fff;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 3% 12px;
+    border: 1px solid;
+    box-sizing: border-box;
+    transition: 0.5s;
+ }
+ .o-nama-col p{
+    color: black;
+ }
+ .o-nama-col h3{
+    color: black;
+    text-align: center;
+    font-weight: 500;
+    margin: 10px 0;
+ }
+ .o-nama-col:hover{
+    background: #69656562;
+ }
+ @media(max-width:700px){
+    .row{
+        flex-direction: column;
+    }
+ }
+
+ /*-----Usluge-----*/
+
+ .usluge{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+ }
+ 
+.usluge .row{
+    margin-top: 3%;
+    display: flex;
+    justify-content: space-between;
+}
+ 
+ h3{
+    font-size: 30px;
+    font-weight: 600;
+    margin: 10px 0;
+ }
+ p{
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 22px;
+    padding-top: 15px;
+    padding-bottom: 2px;
+  
+    
+ }
+ .usluge-col{
+    flex-basis: 31%;
+    background: #efededf1;
+    border-radius: 20px;
+    margin-bottom: 3%;
+    padding: 3% 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+ }
+ .usluge-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.4);
+ }
+
+ /*--------Licence------*/
+
+ .licence{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;  
+ }
+ .licence-col{
+    flex-basis: content;
+    width: 30%;
+    height: 30%;
+    border-radius:10px;
+    margin-bottom: 3%;
+    padding: 3% 12px;
+    position: relative;
+    display: inline-block;  
+ }
+ .licence-col img{
+    width: 100%;  
+}
+.layer {
+    background: transparent;
+    height: 88%;
+    width: 95%;
+    position: absolute;
+    top: 35px;
+    left: 9px;
+    transition: 0.5s;
+}
+.layer:hover{
+    background:  rgba(97, 85, 85, 0.301);
+}
+.layer2 {
+    background: transparent;
+    height: 88%;
+    width: 95%;
+    position: absolute;
+    top: 35px;
+    left: 9px;
+    transition: 0.5s; 
+} 
+.layer2:hover{
+   background:  rgba(97, 85, 85, 0.301);
+} 
+.layer3 {
+    background: transparent;
+    height: 88%;
+    width: 95%;
+    position: absolute;
+    top: 35px;
+    left: 9px;
+    transition: 0.5s;
+}
+.layer3:hover{
+    background:  rgba(97, 85, 85, 0.301);
+}
+@media(max-width:700px){
+    .licence h1{
+        margin-bottom: 38px;
+    }
+    .licence-col{
+        display: contents;
+    }
+        .licence-col img{
+            max-width: 80%;
+            max-height: 100%;
+            margin-bottom: 42px;
+        }
+    }
+
+
+
+/*------Kontakt-----*/
+
+.kontakti{
+    padding-top: 3%;
+    padding-bottom: 50px;
+    font-size: 36px;
+    font-weight: 600;
+}
+.contact-info{
+
+    padding: 6%;
+    text-align: center;
+    color: black;
+    font-size: 40px;   
+}
+.contact-info {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    cursor: pointer;
+}
+.contact-info .card{
+    border-radius: 10%;
+    background: #2f3542; 
+    padding: 0 20px;
+    margin: 25px 10px;
+    width: calc(33% - 20px);
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff 
+    
+}
+.card p{
+    color: #fff;
+    margin-top: 20px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    max-height: 0;
+    opacity: 0;
+    transition: 0.3s linear;  
+}
+.card:hover p {
+    max-height: 40px;
+    opacity: 1;
+}
+.fa-map-marker{
+    font-size: 28px;
+    background: #ff6348;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px !important;
+    border-radius: 50%;
+    transition: 0.3s linear;
+    color: #fff;
+   
+
+}
+.fa-map-marker:hover{
+    background: none;
+    color:#ff6348 ;
+    transform: scale(1.6);
+}
+.fa-phone{
+    font-size: 28px;
+    background: #ff6348;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px !important;
+    border-radius: 50%;
+    transition: 0.3s linear;
+    color: #fff;
+}
+.fa-phone:hover{
+    background: none;
+    color:#ff6348 ;
+    transform: scale(1.6);
+}
+.fa-envelope-o{
+    font-size: 28px;
+    background: #ff6348;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px !important;
+    border-radius: 50%;
+    transition: 0.3s linear;
+    color: #fff;
+}
+.fa-envelope-o:hover{
+    background: none;
+    color:#ff6348 ;
+    transform: scale(1.6);
+}
+.fa-clock-o{
+    font-size: 28px;
+    background: #ff6348;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px !important;
+    border-radius: 50%;
+    transition: 0.3s linear;
+    color: #fff;
+}
+.fa-clock-o:hover{
+    background: none;
+    color:#ff6348 ;
+    transform: scale(1.6);
+}
+@media(max-width: 800px) {
+    .contact-info{
+        flex-direction: column;
+    }
+    .card{
+        width: 100%;
+        max-width: 300px;
+        margin: 10px 0px;   
+    }
+}
+
+/*-----Footer------*/
+.futer{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 80px; 
+    position: relative;
+}
+@media(max-width: 700px){
+    .futer{
+        display: none;
+    }
+    .contact-info .card{
+    padding: 12px 110px;
+    margin: 26px;
+    padding-top: 11px;
+    padding-bottom: 90px;
+    }
+}
+
+/*-----O NAMA-----*/
+
+.sub-header{
+    height: 50vh;
+    width: 100%;
+    background: linear-gradient(rgba(55, 53, 53, 0.372), rgba(6, 6, 6, 0.806)),url(file:///C:/Users/hp/Desktop/geoplan/images/geodezija.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+.sub-header h1{
+    margin-top: 70px;
+}
+.about-us{
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+.aboutus-col{
+    flex-basis: 48%;
+    padding: 30px 2px;  
+}
+.aboutus-col img{
+    width: 100%;
+}
+.aboutus-col h1{
+    padding-top: 55px;
+    text-align: center;
+    font-size: 40px;
+    align-items: center;
+}
+.aboutus-col p{
+    padding: 15px 15px 25px;
+    text-align: center;
+    align-items: center;
+    font-size: 17px;
+    font-weight: 300;
+}
+.red-btn{
+    border: 1px solid #f44336d4;
+    background: transparent;
+    color: #f44336d4;
+    position: relative;
+    margin-left:  35%;
+}
+@media(max-width: 700px){
+    .red-btn{
+        margin-left: 28%;
+    }
+}
+/*----------Kontaktirajte nas stranica------------*/
+
+.lokacija{
+    width: 80%;
+    margin: auto;
+    padding: 80px 0;
+}
+.lokacija iframe{
+    width: 100%;
+}
+.kontakti h1{
+    text-align: center;
+    padding-top: 30px;
+}
+.contact-info-stranica{
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    margin-left: 75px;
+    padding-left: 10%;
+}
+.contact-info-stranica{
+
+    padding: 6%;
+    text-align: center;
+    color: black;
+    font-size: 40px;   
+}
+.contact-info-stranica {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    cursor: pointer;
+    padding-left: 10%;
+}
+.contact-info-stranica .card{
+    border-radius: 10%;
+    background: #2f3542; 
+    padding: 0 20px;
+    margin: 25px 10px;
+    width: calc(33% - 20px);
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff 
+    
+}
+.card p{
+    color: #fff;
+    margin-top: 20px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    max-height: 0;
+    opacity: 0;
+    transition: 0.3s linear;  
+}
+.card:hover p {
+    max-height: 40px;
+    opacity: 1;
+}
+.contact-info-stranica .fa-map-marker{
+    font-size: 28px;
+    background: #ff6348;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px !important;
+    border-radius: 50%;
+    transition: 0.3s linear;
+    color: #fff;
+   
+
+}
+.contact-info-stranica .fa-map-marker:hover{
+    background: none;
+    color:#ff6348 ;
+    transform: scale(1.6);
+}
+.contact-info-stranica .fa-phone{
+    font-size: 28px;
+    background: #ff6348;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px !important;
+    border-radius: 50%;
+    transition: 0.3s linear;
+    color: #fff;
+}
+.contact-info-stranica .fa-phone:hover{
+    background: none;
+    color:#ff6348 ;
+    transform: scale(1.6);
+}
+.contact-info-stranica .fa-envelope-o{
+    font-size: 28px;
+    background: #ff6348;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px !important;
+    border-radius: 50%;
+    transition: 0.3s linear;
+    color: #fff;
+}
+.contact-info-stranica .fa-envelope-o:hover{
+    background: none;
+    color:#ff6348 ;
+    transform: scale(1.6);
+}
+.contact-info-stranica .fa-clock-o{
+    font-size: 28px;
+    background: #ff6348;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px !important;
+    border-radius: 50%;
+    transition: 0.3s linear;
+    color: #fff;
+}
+.contact-info-stranica .fa-clock-o:hover{
+    background: none;
+    color:#ff6348 ;
+    transform: scale(1.6);
+}
+@media screen and (max-width:800px){
+    .contact-info-stranica{
+        flex-direction: column;
+        margin: 0;
+    }
+    .contact-info-stranica .card{
+        width: 100%;
+        max-width: 300px;
+        margin: 10px 0;
+    }
+}
+
+
+
